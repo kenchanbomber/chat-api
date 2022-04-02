@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+3.times do |i|
+    Message.create(content: "これは#{i}番目のメッセージです。", user_id: User.first.id)
+    puts "#{i}th seed's message created!"
+end
